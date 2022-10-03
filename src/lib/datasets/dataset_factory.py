@@ -21,6 +21,7 @@ dataset_factory = {
 _sample_factory = {
   'multi_pose': MultiPoseDataset,
   'single_pose': SinglePoseDataset,
+  'single_hand': SinglePoseDataset,
 }
 
 

@@ -7,5 +7,6 @@ from .single_pose import SinglePoseTrainer
 
 train_factory = {
   'multi_pose': MultiPoseTrainer,
-  'single_pose': SinglePoseTrainer
+  'single_pose': SinglePoseTrainer,
+  'single_hand': SinglePoseTrainer,
 }
