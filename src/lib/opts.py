@@ -234,6 +234,9 @@ class opts(object):
         elif opt.task == "single_pose":
             opt.flip_idx = dataset.flip_idx
             opt.heads = {'hm': opt.num_classes, 'hps': 34, 'hm_hp': 17, 'hp_offset': 34}
+        elif opt.task == "single_hand":
+            opt.flip_idx = dataset.flip_idx
+            opt.heads = {'hm': opt.num_classes, 'hps': 12, 'hm_hp': 6, 'hp_offset': 12}
         else:
             assert 0, 'task not defined!'
         print('heads', opt.heads)

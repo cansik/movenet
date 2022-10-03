@@ -8,12 +8,14 @@ from .sample.single_pose import SinglePoseDataset
 
 from .dataset.coco_hp import COCOHP
 from .dataset.active import ACTIVE
+from .dataset.active_hand import ACTIVE_HAND
 
 
 dataset_factory = {
   'coco_hp': COCOHP,
   'active': ACTIVE,
   'active_coco': ACTIVE,
+  'active_hand': ACTIVE_HAND,
 }
 
 _sample_factory = {
