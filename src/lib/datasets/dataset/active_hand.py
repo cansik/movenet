@@ -36,7 +36,7 @@ class ACTIVE_HAND(data.Dataset):
         }
     """
     num_classes = 1
-    num_joints = 17
+    num_joints = 6
     default_resolution = [192, 192] # mli: for movenet-lightning
     mean = np.array([1., 1., 1.],
                     dtype=np.float32).reshape(1, 1, 3)

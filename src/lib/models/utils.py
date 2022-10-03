@@ -24,7 +24,7 @@ def _gather_feat(feat, ind, mask=None):
 
 def _gather_feat_plus(feat, ind):
     # num_objs = ind.size(1) / 17
-    ind = ind.view(ind.size(0), -1, 17)
+    ind = ind.view(ind.size(0), -1, 6)
     ind = ind.unsqueeze(3).expand(ind.size(0), ind.size(1), ind.size(2), 2)
     feat = feat.gather(1, ind)
     return feat
@@ -38,7 +38,7 @@ def _transpose_and_gather_feat(feat, ind):
 
 def _transpose_and_gather_feat_plus(feat, ind):
     feat = feat.permute(0, 2, 3, 1).contiguous()
-    feat = feat.view(feat.size(0), -1, 17, 2)
+    feat = feat.view(feat.size(0), -1, 6, 2)
     feat = _gather_feat_plus(feat, ind)
     feat = feat.view(feat.size(0), -1, 2)
     return feat
