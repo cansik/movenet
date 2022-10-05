@@ -9,6 +9,15 @@ I remove the redundant code for other dataset and tasks, simplify this codebase,
 ## Prepare the datasets
 Move the images and annotations into data and name the folder as `Active`. The annotation format should be COCO format. If you annotate the images with MPII format, you can utilize [convert_active_to_coco.py](src/tools/convert_active_to_coco.py) and [convert_mpii_to_coco.py](src/tools/convert_mpii_to_coco.py).
 
+```
+/data/active/
+   - annotations/
+      - active_train.json
+      - active_val.json
+   - train/
+   - val/
+```
+
 ## Run training code
 ```bash
 cd src
