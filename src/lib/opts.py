@@ -256,6 +256,11 @@ class opts(object):
                 'dataset': 'active', 'num_joints': 17,
                 'flip_idx': [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10],
                              [11, 12], [13, 14], [15, 16]]},
+            'single_hand': {
+                'default_resolution': [512, 512], 'num_classes': 1,
+                'mean': [1., 1., 1.], 'std': [1., 1., 1.],
+                'dataset': 'active_hand', 'num_joints': 6,
+                'flip_idx': []},
         }
 
         class Struct:
